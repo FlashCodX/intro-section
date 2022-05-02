@@ -1,0 +1,81 @@
+.container{
+  width: 100%;
+  height: 80px;
+  padding: 0 25px;
+display: flex;  
+align-items: center;
+justify-content: space-between;
+gap: 40px;
+}
+
+.navItems{
+  width: 100%;
+  display: flex;
+  gap: 60px;
+}
+
+.itemOffset{
+margin-left: -50px;
+}
+
+.item{
+  display: flex;
+}
+
+.navItem{
+  position: relative;
+}
+.dropdown{
+  border-radius: 10px;
+  border: 1px solid black;
+  min-width: 120px;
+  margin-top: 20px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+
+.dropdownItem{
+  height: 50px;
+  cursor: pointer;
+  padding: 0 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.dropdownItem:hover{
+  background: black;
+  color: white;
+}
+
+.authentication{
+  display: flex;
+  align-items: center;
+}
+
+.authentication > button{
+  cursor: pointer;
+  background: none;
+  border: 2px solid var(--almost-black);
+  height: 40px;
+  color: var(--almost-black);
+  border-radius: 15px;
+  font-size:1rem;
+  min-width: 100px;
+}
+
+
+.loginBtn{
+  border: none !important;
+}
+
+.loginBtn:hover{
+  color: black;
+}
+
+.registerBtn{
+  border-color: black;
+}
