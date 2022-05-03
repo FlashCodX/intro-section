@@ -1,6 +1,11 @@
+import { useState } from "react";
 import hero from "../assets/image-hero-desktop.png";
 import styles from "../styles/app.module.css";
+import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
+
+const closeIcon = require("../assets/icon-close-menu.svg").default;
+const menuIcon = require("../assets/icon-menu.svg").default;
 
 const audiophile = require("../assets/client-audiophile.svg").default;
 const databiz = require("../assets/client-databiz.svg").default;
@@ -17,32 +22,41 @@ function App() {
     content,
     heroImage,
   } = styles;
+  const [open, setOpen] = useState(false);
   return (
     <div className={container}>
       <div className={navs}>
         <Navbar />
-        <div className={contentContainer}>
-          <div className={content}>
-            <h1>
-              Make <br /> remote work
-            </h1>
-            <p>
-              Get your team in sync, no matter your location. Streamline
-              processes, create team rituals, and watch productivity soar.
-            </p>
-            <div className={buttonContainer}>
-              <button>Learn more</button>
-            </div>
-            <div className={iconsContainer}>
-              <img src={databiz} alt="" />
-              <img src={audiophile} alt="" />
-              <img src={meet} alt="" />
-              <img src={maker} alt="" />
-            </div>
+
+        <img
+          onClick={() => setOpen(!open)}
+          src={open ? closeIcon : menuIcon}
+          alt=""
+        />
+        <MobileNav openNav={open} />
+      </div>
+
+      <div className={contentContainer}>
+        <div className={content}>
+          <h1>
+            Make <br /> remote work
+          </h1>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+          <div className={buttonContainer}>
+            <button>Learn more</button>
           </div>
-          <div className={imageContainer}>
-            <img className={heroImage} src={hero} alt="hero" />
+          <div className={iconsContainer}>
+            <img src={databiz} alt="" />
+            <img src={audiophile} alt="" />
+            <img src={meet} alt="" />
+            <img src={maker} alt="" />
           </div>
+        </div>
+        <div className={imageContainer}>
+          <img className={heroImage} src={hero} alt="hero" />
         </div>
       </div>
     </div>

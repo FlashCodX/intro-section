@@ -4,7 +4,18 @@
   min-height: 100vh;
 }
 
+.navs > img{
+  display: none ;
+  visibility: collapse;
+  position: fixed;
+  z-index: 300 !important;
+  right: 20px;
+  object-fit: cover;
+  top: 20px;
+}
+
 .contentContainer{
+  padding: 0 3rem;
   max-width: 1600px;
   min-height: 700px;
   margin: auto;
@@ -39,27 +50,29 @@ margin-top: 6rem;
 }
 
 .content  button{
-  transition: .2s;
+  transition: .5s;
   cursor: pointer;
   min-width: 170px;
   border-radius: 10px;
   font-size: 1.1rem;
   border: 2px solid black;
-  height: 50px;
-  font-weight: bold;
-  background: none;
-}
-
-.content > button:hover{
   background: black;
   color: white;
+  height: 50px;
+  font-weight: bold;
+}
+
+.content  button:hover{
+  background: white;
+  color: black;
 }
 
 .iconsContainer{
   display: flex;
   justify-self: flex-end;
   align-items: center;
-  justify-content: space-around;
+  max-width: 550px;
+  justify-content: space-between;
 }
 
 .imageContainer{
@@ -70,13 +83,20 @@ margin-top: 6rem;
   position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: right;
+  object-fit: scale-down;
+  object-position: center;
 }
 
 @media (max-width:768px) {
 
+.navs > img{
+display: block;
+visibility: visible;
+}
+
   .content{
+    order: 1;
+    gap: 1rem;
     text-align: center;
     align-items: center;
     margin-top: 0;
@@ -84,23 +104,46 @@ margin-top: 6rem;
 
   .content > h1{
     font-size: 2rem;
+    display: inline !important;
     width: 100%;
   }
+
+  .buttonContainer{
+    justify-content: center;
+  }
+
+  .iconsContainer{
+    gap: 2rem;
+  }
+
+  .content > h1 > br{
+    display: none;
+  }
+
   .contentContainer{
+    margin-top: 0;
     display: flex;
     flex-direction: column;
   }
 
+  .content{
+    gap: 2rem;
+  }
+
   .imageContainer{
+    margin-bottom: 3rem;
+    order: 0;
     width: 100%;
-    height: 500px;
+   max-height: auto;
     object-position: center;
-    background: red;
   }
 
   .heroImage{
-  position: absolute;
+    position: relative;
+  object-position: top;
+  content: url('../assets/image-hero-mobile.png');
     width: 100%;
+    height: auto;
   }
 
 }

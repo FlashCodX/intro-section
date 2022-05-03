@@ -5,13 +5,19 @@
 display: flex;  
 align-items: center;
 justify-content: space-between;
-gap: 40px;
+gap: 80px;
 }
 
 .navItems{
+  align-items: center;
   width: 100%;
   display: flex;
-  gap: 60px;
+  gap: 4rem;
+}
+
+.navItems a{
+  text-decoration: none ;
+  color: black;
 }
 
 .itemOffset{
@@ -19,13 +25,19 @@ margin-left: -50px;
 }
 
 .item{
+  cursor: pointer;
+  font-size: 1rem;
+  background: none;
+  border: none;
   display: flex;
 }
 
 .navItem{
   position: relative;
 }
+
 .dropdown{
+  overflow: hidden;
   border-radius: 10px;
   border: 1px solid black;
   min-width: 120px;
@@ -44,6 +56,11 @@ margin-left: -50px;
   gap: 10px;
   align-items: center;
   position: relative;
+}
+
+.dropdownItem > img{
+  width: 15px;
+  height: 15px;
 }
 
 .dropdownItem:hover{
@@ -78,4 +95,17 @@ margin-left: -50px;
 
 .registerBtn{
   border-color: black;
+}
+
+@media (max-width:768px) {
+  .navItems{
+    display: none;
+    visibility: hidden;
+  }
+
+  .authentication{
+    visibility: hidden;
+    display: none;
+  }
+
 }

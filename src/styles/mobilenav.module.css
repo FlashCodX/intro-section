@@ -1,0 +1,81 @@
+.container{
+  visibility: collapse !important;
+z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin-top: -80px;
+}
+
+.menu{
+  position: absolute;
+  right: -300px;
+  padding: 0 10px;
+  z-index: 1;
+  background: white;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  min-width: 250px;
+  gap: 10px;
+}
+
+.menu > button{
+  width: 100%;
+}
+
+
+
+@keyframes openNav {
+  0%{
+    right: -300px;
+  }
+    100%{
+      right:0 ;
+    }
+  }
+  
+
+.open{
+  animation: openNav .5s  forwards normal;
+}
+
+.close{
+  animation: openNav .5s reverse normal;
+}
+
+
+.menu > img{
+  position: fixed;
+  align-self: flex-end;
+  top: 15px;
+  right: 15px;
+width: 20px;
+height: 20px;
+}
+
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, .5);
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+  .container{
+    visibility: visible !important;
+  }
+}
+
+
