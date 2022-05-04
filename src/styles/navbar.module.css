@@ -36,6 +36,11 @@ margin-left: -50px;
   position: relative;
 }
 
+.navItem p,a{
+  text-decoration: none !important;
+  font-weight: 300 !important;
+}
+
 .dropdown{
   overflow: hidden;
   border-radius: 10px;

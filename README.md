@@ -2,9 +2,13 @@
 
 # ![preview](./src/assets/screenshot.png)
 
+# ![preview](./src/assets/screenshot2.png)
+
+# ![preview](./src/assets/screenshot3.png)
+
 A challenge made for Frontend Mentor.
 
-<!-- > Check it out: [https://FlashCodX.github.io/time-tracking-dashboard/](https://FlashCodX.github.io/time-tracking-dashboard/) -->
+> Check it out: [https://FlashCodX.github.io/intro-section/](https://FlashCodX.github.io/intro-section/)
 
 ## Tech
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import styles from "../styles/mobilenav.module.css";
 const closeIcon = require("../assets/icon-close-menu.svg").default;
 const menuIcon = require("../assets/icon-menu.svg").default;
@@ -8,7 +8,6 @@ const calendar = require("../assets/icon-calendar.svg").default;
 const planning = require("../assets/icon-planning.svg").default;
 const reminders = require("../assets/icon-reminders.svg").default;
 const todo = require("../assets/icon-todo.svg").default;
-const logo = require("../assets/logo.svg").default;
 function MobileNav() {
   const [open, setOpen] = useState(true);
 
@@ -45,9 +44,9 @@ function MobileNav() {
             className={navItem}
             onClick={() => setOpenFeatures(!openFeatures)}
           >
-            <button className={item} /*onBlur={() => setOpenFeatures(false)}*/>
+            <button className={item} onBlur={() => setOpenFeatures(false)}>
               <p>Features</p>
-              <MdKeyboardArrowDown />
+              {openFeatures ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </button>
             {openFeatures && (
               <div className={`${dropdown} ${itemOffset}`}>
@@ -74,7 +73,7 @@ function MobileNav() {
           <div className={navItem} onClick={() => setOpenCompany(!openCompany)}>
             <button className={item} onBlur={() => setOpenCompany(false)}>
               <p>Company</p>
-              <MdKeyboardArrowDown />
+              {openCompany ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </button>
             {openCompany && (
               <div className={dropdown}>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import styles from "../styles/navbar.module.css";
 
 const calendar = require("../assets/icon-calendar.svg").default;
@@ -32,7 +32,7 @@ function Navbar() {
         <div className={navItem} onClick={() => setOpenFeatures(!openFeatures)}>
           <button className={item} onBlur={() => setOpenFeatures(false)}>
             <p>Features</p>
-            <MdKeyboardArrowDown />
+            {openFeatures ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
           </button>
           {openFeatures && (
             <div className={`${dropdown} ${itemOffset}`}>
@@ -59,7 +59,7 @@ function Navbar() {
         <div className={navItem} onClick={() => setOpenCompany(!openCompany)}>
           <button className={item} onBlur={() => setOpenCompany(false)}>
             <p>Company</p>
-            <MdKeyboardArrowDown />
+            {openCompany ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
           </button>
           {openCompany && (
             <div className={dropdown}>
