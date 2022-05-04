@@ -9,7 +9,7 @@ const planning = require("../assets/icon-planning.svg").default;
 const reminders = require("../assets/icon-reminders.svg").default;
 const todo = require("../assets/icon-todo.svg").default;
 function MobileNav() {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const {
     container,
