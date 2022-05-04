@@ -1,11 +1,7 @@
-import { useState } from "react";
 import hero from "../assets/image-hero-desktop.png";
 import styles from "../styles/app.module.css";
 import MobileNav from "./MobileNav";
 import Navbar from "./Navbar";
-
-const closeIcon = require("../assets/icon-close-menu.svg").default;
-const menuIcon = require("../assets/icon-menu.svg").default;
 
 const audiophile = require("../assets/client-audiophile.svg").default;
 const databiz = require("../assets/client-databiz.svg").default;
@@ -22,18 +18,11 @@ function App() {
     content,
     heroImage,
   } = styles;
-  const [open, setOpen] = useState(false);
   return (
     <div className={container}>
       <div className={navs}>
         <Navbar />
-
-        <img
-          onClick={() => setOpen(!open)}
-          src={open ? closeIcon : menuIcon}
-          alt=""
-        />
-        <MobileNav openNav={open} />
+        <MobileNav />
       </div>
 
       <div className={contentContainer}>

@@ -4,15 +4,7 @@
   min-height: 100vh;
 }
 
-.navs > img{
-  display: none ;
-  visibility: collapse;
-  position: fixed;
-  z-index: 300 !important;
-  right: 20px;
-  object-fit: cover;
-  top: 20px;
-}
+
 
 .contentContainer{
   padding: 0 3rem;
@@ -89,10 +81,7 @@ margin-top: 6rem;
 
 @media (max-width:768px) {
 
-.navs > img{
-display: block;
-visibility: visible;
-}
+
 
   .content{
     order: 1;

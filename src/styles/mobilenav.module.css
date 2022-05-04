@@ -7,6 +7,16 @@ z-index: 1;
   margin-top: -80px;
 }
 
+
+.container > img{
+  visibility: collapse;
+  position: fixed;
+  z-index: 300 !important;
+  right: 20px;
+  object-fit: cover;
+  top: 20px;
+}
+
 .menu{
   position: absolute;
   right: -300px;
@@ -26,6 +36,57 @@ z-index: 1;
 }
 
 
+.navItems{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 15px;
+  margin-top: 4rem;
+}
+
+.navItems > a{
+  text-decoration: none;
+  color: black;
+}
+
+
+.menu > button{
+  cursor: pointer;
+  background: none;
+  border: 2px solid var(--almost-black);
+  height: 40px;
+  color: var(--almost-black);
+  border-radius: 15px;
+  font-size:1rem;
+  min-width: 100px;
+}
+
+.loginBtn{
+  border: none !important;
+}
+
+.item{
+  cursor: pointer;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  display: flex;
+}
+
+.dropdown{
+  margin-top: 15px;
+  display: flex;
+  gap: 25px;
+  margin-left: 15px;
+  flex-direction: column;
+}
+
+
+.dropdownItem{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
 @keyframes openNav {
   0%{
@@ -34,15 +95,30 @@ z-index: 1;
     100%{
       right:0 ;
     }
+  
+  
+  
   }
+
+
+  @keyframes closeNav {
+    0%{
+      right: 0;
+    }
+      100%{
+        right:-300px ;
+      }
+    
+    }
+
   
 
-.open{
+.openAnim{
   animation: openNav .5s  forwards normal;
 }
 
 .close{
-  animation: openNav .5s reverse normal;
+  animation: closeNav .5s forwards normal;
 }
 
 
@@ -75,6 +151,10 @@ height: 20px;
 @media (max-width:768px) {
   .container{
     visibility: visible !important;
+  }
+
+  .container > img{
+    visibility: visible;
   }
 }
 
