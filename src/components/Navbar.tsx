@@ -26,12 +26,12 @@ function Navbar() {
   const [openCompany, setOpenCompany] = useState(false);
 
   return (
-    <nav className={container}>
+    <div className={container}>
       <img src={logo} alt="logo" />
       <div className={navItems}>
         <div className={navItem} onClick={() => setOpenFeatures(!openFeatures)}>
           <button className={item} onBlur={() => setOpenFeatures(false)}>
-            <p>Features</p>
+            Features
             {openFeatures ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
           </button>
           {openFeatures && (
@@ -58,7 +58,7 @@ function Navbar() {
 
         <div className={navItem} onClick={() => setOpenCompany(!openCompany)}>
           <button className={item} onBlur={() => setOpenCompany(false)}>
-            <p>Company</p>
+            Company
             {openCompany ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
           </button>
           {openCompany && (
@@ -82,7 +82,7 @@ function Navbar() {
         <button className={loginBtn}>Login</button>
         <button className={registerBtn}>Register</button>
       </div>
-    </nav>
+    </div>
   );
 }
 

@@ -31,7 +31,7 @@ function MobileNav() {
   const [openCompany, setOpenCompany] = useState(false);
 
   return (
-    <nav className={`${container}`}>
+    <div className={`${container}`}>
       {open && <div className={overlay} />}
       <img
         onClick={() => setOpen(!open)}
@@ -45,7 +45,7 @@ function MobileNav() {
             onClick={() => setOpenFeatures(!openFeatures)}
           >
             <button className={item} onBlur={() => setOpenFeatures(false)}>
-              <p>Features</p>
+              Features
               {openFeatures ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </button>
             {openFeatures && (
@@ -72,7 +72,7 @@ function MobileNav() {
 
           <div className={navItem} onClick={() => setOpenCompany(!openCompany)}>
             <button className={item} onBlur={() => setOpenCompany(false)}>
-              <p>Company</p>
+              Company
               {openCompany ? <MdKeyboardArrowUp /> : <MdKeyboardArrowDown />}
             </button>
             {openCompany && (
@@ -96,7 +96,7 @@ function MobileNav() {
         <button className={loginBtn}>Login</button>
         <button className={registerBtn}>Register</button>
       </div>
-    </nav>
+    </div>
   );
 }
 

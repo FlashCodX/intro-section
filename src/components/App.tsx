@@ -22,10 +22,10 @@ function App() {
   return (
     <>
       <main className={container}>
-        <div className={navs}>
+        <nav className={navs}>
           <Navbar />
           <MobileNav />
-        </div>
+        </nav>
         <div className={contentContainer}>
           <div className={content}>
             <h1>
