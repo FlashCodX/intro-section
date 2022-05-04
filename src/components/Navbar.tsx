@@ -75,8 +75,8 @@ function Navbar() {
             </div>
           )}
         </div>
-        <a href="/">Careers</a>
-        <a href="/">About</a>
+        <a href="/intro-section/">Careers</a>
+        <a href="/intro-section/">About</a>
       </div>
       <div className={authentication}>
         <button className={loginBtn}>Login</button>
